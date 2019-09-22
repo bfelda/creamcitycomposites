@@ -1,0 +1,83 @@
+---
+layout: layout.html
+---
+
+<!-- ============================================================= SECTION – HERO ============================================================= -->
+
+<section id="hero">
+    <div id="owl-main" class="owl-carousel owl-one-item">
+        
+        <div class="item img-bg-center">
+            <div class="container">
+                <div class="overlay"></div>
+                <div class="tv">
+                    <div class="screen mute" id="tv"></div>
+                </div>
+                <div class="caption vertical-center text-center">
+                    <h1 class="fadeInDown-1 light-color">PREMIUM CLASS CARBON FIBER COMPONENTS</h1>
+                    <p class="fadeInDown-2 light-color">Consistent Fit & Perfection – On-Time, Every Time.</p>
+
+                    
+                </div><!-- /.caption -->
+            </div><!-- /.container -->
+        </div><!-- /.item -->
+        
+    </div><!-- /.owl-carousel -->
+</section>
+<script>
+    var tag = document.createElement('script');
+            tag.src = 'https://www.youtube.com/player_api';
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var tv,playerDefaults = {
+        autoplay: 0, 
+        loop:1, 
+        autohide: 1, 
+        modestbranding: 0, 
+        rel: 0, 
+        fs: 1,
+        cc_load_policy: 0,
+        showinfo: 0, 
+        controls: 0, 
+        disablekb: 1, 
+        enablejsapi: 0, 
+        iv_load_policy: 3
+    };
+    
+    var vid = {
+        'videoId': '1tkcKWbFE38', 
+        'suggestedQuality': 'hd720'
+        }
+
+    function onYouTubePlayerAPIReady(){
+        tv = new YT.Player('tv', {events: {'onReady': onPlayerReady, 'onStateChange': onStateChange }, playerVars: playerDefaults});
+    }
+
+    function onPlayerReady(){
+        tv.loadVideoById(vid);
+        tv.mute();
+    }
+
+    function onStateChange(event) {
+        if(event.data === 0) {
+            tv.seekTo(0);
+        }
+    }
+
+    function vidRescale(){
+        var w = window.width+200,
+            h = window.height+200;
+
+        if (w/h > 16/9){
+            tv.setSize(w, w/16*9);
+            document.querySelector('.tv .screen').css({'left': '0px'});
+        } else {
+            tv.setSize(h/9*16, h);
+            document.querySelector('.tv .screen').css({'left': -(document.querySelector('.tv .screen').outerWidth()-w)/2});
+        }
+    }
+
+    // window.onResize = vidRescale();
+</script>
+
+<!-- ============================================================= SECTION – HERO : END ============================================================= -->
