@@ -144,7 +144,7 @@ $(document).ready(function() {
 				element		: '.navbar-brand img',
 				style		: 'height',
 				start		: 'currentValueFromCSS',
-				end			: 20,
+				end			: 60,
 				distance	: 300,
 				delay		: topHeaderHeight
 			}

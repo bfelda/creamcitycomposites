@@ -9,6 +9,13 @@
 .white-text {
     color: white;
 }
+
+.blue-background
+{
+    background-image: url("/assets/images/art/pattern-background02.png");
+    color: white;
+}
+
 section#hero .tv-container {
     padding-bottom: 56.25%;
     max-width: 100%;
