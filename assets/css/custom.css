@@ -5,17 +5,27 @@
 /*===================================================================================*/
 
 /* Insert your own styles in here! */
+
+.white-text {
+    color: white;
+}
+section#hero .tv-container {
+    padding-bottom: 56.25%;
+    max-width: 100%;
+    overflow: hidden;
+    height: 0;
+}
+
 section#hero iframe {
-    min-width: 100%;
-    min-height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left:0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 video {
-    min-height: 100%;
-    min-width: 100%;
+    width: 100%;
 }
 
 section#hero .overlay{
@@ -26,4 +36,22 @@ section#hero .overlay{
     left: 0;
     z-index: 1;
     background: rgba(112, 128, 144, 0.3);
+}
+
+section.sub-hero {
+    background-size: cover;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/images/home-carbon-fiberBLACK.jpg');
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+}
+
+section.sub-hero > div:nth-child(2) {
+    width: 200px;
+    display: flex;
+    justify-content: center;
 }
