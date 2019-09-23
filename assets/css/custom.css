@@ -16,6 +16,17 @@
     color: white;
 }
 
+.more-info {
+    background-image: url("/assets/images/formula1a.jpg");
+    color: white;
+}
+
+.more-info #triangle {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
 section#hero .tv-container {
     padding-bottom: 56.25%;
     max-width: 100%;
@@ -61,4 +72,16 @@ section.sub-hero > div:nth-child(2) {
     width: 200px;
     display: flex;
     justify-content: center;
+}
+
+footer .miusa {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer .miusa > div:first-child{
+    margin-right: 10px;
+    padding-top: 5px;
 }
