@@ -16,6 +16,15 @@
     color: white;
 }
 
+#owl-main .item {
+    height: 60vh;
+}
+
+#owl-main .caption.text-center {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .more-info {
     background-image: url("/assets/images/formula1a.jpg");
     color: white;
@@ -27,23 +36,12 @@
     top: 0;
 }
 
-section#hero .tv-container {
-    padding-bottom: 56.25%;
-    max-width: 100%;
-    overflow: hidden;
-    height: 0;
-}
-
 section#hero iframe {
     position: absolute;
-    top: 0;
+    top: -150px;
     left:0;
     min-width: 100%;
     min-height: 100%;
-}
-
-video {
-    width: 100%;
 }
 
 section#hero .overlay{

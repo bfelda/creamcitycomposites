@@ -191,13 +191,23 @@ layout: layout.html
     };
     
     var vid = {
-        'height':'720',
         'videoId': '1tkcKWbFE38', 
         'suggestedQuality': 'hd720'
         }
 
     function onYouTubePlayerAPIReady(){
-        tv = new YT.Player('tv', {events: {'onReady': onPlayerReady, 'onStateChange': onStateChange }, playerVars: playerDefaults});
+        tv = new YT.Player('tv', 
+        {
+            height: '1080',
+            width: '1920',
+            videoId: '1tkcKWbFE38',
+            events: 
+            {
+                'onReady': onPlayerReady, 
+                'onStateChange': onStateChange 
+            }, 
+            playerVars: playerDefaults
+        });
     }
 
     function onPlayerReady(){
